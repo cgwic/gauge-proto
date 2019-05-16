@@ -525,3 +525,15 @@ message Message {
   /// [KeepAlive ](#gauge.messages.KeepAlive )
   KeepAlive keepAlive = 37;
 }
+
+message LogInfo {
+    string ID = 1;
+    string Message = 2;
+    enum LogLevel {
+        Debug = 0;
+        Error = 1;
+        Info =  2;
+        Fatal = 3;
+    }
+    LogLevel Level = 3;
+}
